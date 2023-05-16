@@ -1,6 +1,8 @@
-# vue-weather
+# vue-chat-training
 
-Vite, Vue 3, Composition API, Pinia
+Vite, Vue 3, Composition API, FSD
+
+Featured-Sliced Design - https://feature-sliced.design/
 
 
 ## Project Setup
