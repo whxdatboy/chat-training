@@ -1,0 +1,39 @@
+{
+  "name": "vue-weather",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vue-tsc ---noEmit --watch && vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "pinia": "^2.0.28",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@types/node": "^18.13.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.8.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.7.1",
+    "sass": "^1.57.1",
+    "tailwindcss": "^3.2.4",
+    "types": "^0.1.1",
+    "unplugin-svg-component": "^0.4.1",
+    "vite": "^4.0.0",
+    "vite-plugin-checker": "^0.5.6",
+    "vue-tsc": "^1.1.5"
+  }
+}
