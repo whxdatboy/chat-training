@@ -3,7 +3,8 @@
     <div class="chat-window__body">
       <div
         ref="chatBody"
-        class="chat-window__scroll">
+        class="chat-window__scroll"
+        @scroll="handlerScroll">
         <template v-if="props.messages.length > 0">
           <ChatUser
             v-for="(item, index) in props.messages"
@@ -26,6 +27,23 @@ import { MessagesItem } from './types/index'
 const props = defineProps<{
   messages: MessagesItem[]
 }>()
+
+const emits = defineEmits<{
+  (e: 'scrollAtTop'): void
+}>()
+
+function handlerScroll(e: Event) {
+  const target = e.target
+  let scrollPosition
+
+  if (target) {
+    scrollPosition = target.closest('.chat-window__scroll').scrollTop
+
+    if (scrollPosition < 50) {
+      emits('scrollAtTop')
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
