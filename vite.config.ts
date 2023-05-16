@@ -9,9 +9,10 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': appPath.src,
-      components: appPath.components,
+      pages: appPath.pages,
       images: appPath.images,
       icons: appPath.icons,
+      fonts: appPath.fonts,
       types: appPath.types
     }
   },

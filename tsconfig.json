@@ -20,7 +20,9 @@
     "paths": {
       "*": ["./src/*"],
       "@/pages/*": ["./src/pages/*"],
-      "images/*": ["./src/components/*"]
+      "@/images/*": ["./src/app/images/*"],
+      "@/widgets/*": ["./src/widgets/*"],
+      "@/entities/*": ["./src/entities/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "package.json", "./**/*.ts"],

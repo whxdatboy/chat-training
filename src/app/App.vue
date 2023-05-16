@@ -1,9 +1,10 @@
 <template>
-  <div class="container mx-auto px-4">
-    <VChat />
-  </div>
+  <ChatApp />
 </template>
 
 <script setup>
-import VChat from '@/pages/VChat.vue'
+import './styles/base/_mixins.scss'
+import ChatApp from 'pages/ChatApp'
 </script>
+
+<style lang="scss"></style>
