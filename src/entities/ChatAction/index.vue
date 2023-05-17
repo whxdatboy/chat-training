@@ -1,9 +1,12 @@
 <template>
   <div class="chat-action rounded-lg border-2 border-gray-600 bg-gray-900">
     <form
+      ref="messageInput"
       class="chat-action-block"
       @submit.prevent="submitHandler">
-      <textarea v-model="chatMessage" />
+      <textarea
+        v-model="chatMessage"
+        @keyup="keyUpHandler" />
       <button
         type="submit"
         class="chat-action-send">
@@ -19,6 +22,7 @@
 import { ref } from 'vue'
 
 const chatMessage = ref('')
+const messageInput = ref<Element>()
 
 const emits = defineEmits<{
   (e: 'submitChatMessage', value: string): void
@@ -28,6 +32,12 @@ function submitHandler(): void {
   emits('submitChatMessage', chatMessage.value)
 
   chatMessage.value = ''
+}
+
+function keyUpHandler(e: KeyboardEvent) {
+  if (e.code === 'Enter' || e.code === 'NumpadEnter') {
+    submitHandler()
+  }
 }
 </script>
 
@@ -40,8 +50,10 @@ function submitHandler(): void {
     width: 100%;
     padding: 16px;
 
-    textarea {
+    textarea,
+    input {
       display: block;
+      max-width: 100%;
       width: 100%;
       min-height: 24px;
       height: auto;

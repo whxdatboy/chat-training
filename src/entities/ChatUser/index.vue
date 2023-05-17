@@ -26,6 +26,7 @@ const whoUser = computed(() => {
 .chat-user {
   display: flex;
   align-items: flex-end;
+  padding: 8px 0;
 
   &--friend {
     justify-content: flex-start;
@@ -47,9 +48,6 @@ const whoUser = computed(() => {
       order: 1;
       background-color: #6848d5;
     }
-  }
-  &:not(:first-child) {
-    margin-top: 12px;
   }
 
   .chat-message {
