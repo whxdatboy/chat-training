@@ -1,8 +1,9 @@
 # vue-chat-training
 
-Vite, Vue 3, Composition API, FSD
+Проект написан с использованием следующих инструментов:
+[Vite](https://vitejs.dev/), [Vue 3 Composition API](https://vuejs.org/), 
+[Featured-Sliced Design](https://feature-sliced.design/), [TypeScript](https://www.typescriptlang.org/)
 
-Featured-Sliced Design - https://feature-sliced.design/
 
 
 ## Project Setup
